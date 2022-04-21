@@ -4,13 +4,8 @@
 //<script type="text/javascript" src="https://mhpsac.github.io/sac/xlsx.js"></script>
 
 (function()  {
-
-    customElements.define('com-sap-sample-helloworld1', class HelloWorld1 extends HTMLElement {
-
-
-		constructor() {
-
-    let tmpl = document.createElement('template');
+	
+	let tmpl = document.createElement('template');
     tmpl.innerHTML = `
 	<html>
 	
@@ -20,6 +15,11 @@
 		</body>
 	</html>
     `;
+
+    customElements.define('com-sap-sample-helloworld1', class HelloWorld1 extends HTMLElement {
+
+
+		constructor() {
 
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
@@ -76,7 +76,7 @@
 			console.log('Methode uploadProcess');
 			
 			const input = document.getElementById('input');
-			console.log(input.files[0]);
+			console.log(input);
 
 			
 		}
