@@ -73,25 +73,10 @@
 
 		uploadProcess() {	
 			console.log('Methode uploadProcess');
+			
+			const input = document.getElementById('input');
+			console.log(input.files[0]);
 
-			// Reading our test file
-			const file = xlsx.readFile('https://mhpsac.github.io/sac/data_file.xlsx')
-
-			let data = []
-
-			const sheets = file.SheetNames
-
-			for(let i = 0; i < sheets.length; i++)
-			{
-			const temp = reader.utils.sheet_to_json(
-					file.Sheets[file.SheetNames[i]])
-			temp.forEach((res) => {
-				data.push(res)
-			})
-			}
-
-			// Printing data
-			console.log(data)
 			
 		}
 	
