@@ -2,6 +2,7 @@
 //import readXlsxFile from 'read-excel-file'
 //const parse = require('read-excel-file');
 //<script type="text/javascript" src="https://mhpsac.github.io/sac/xlsx.js"></script>
+// https://blogs.sap.com/2020/09/05/excel-file-upload-from-sap-analytics-cloud-analytic-application/
 
 (function()  {
 	
@@ -68,7 +69,20 @@
 		loadUploadLibs() {	
 			console.log('Methode loadUploadLibs');
 
+			var that = this;
 
+			  let xlsxjs = "https://mhpsac.github.io/sac/xlsx.js";
+			  async function LoadLibs() {
+				try {
+				  await loadScript(xlsxjs, _shadowRoot);
+				} catch (e) {
+				  console.log(e);
+				} finally {
+				  loadthis(that, changedProperties);
+				}
+			  }
+			  LoadLibs();
+}
 			
 		}
 
