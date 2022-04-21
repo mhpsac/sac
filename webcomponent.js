@@ -1,13 +1,13 @@
 // MessageToast
 //import readXlsxFile from 'read-excel-file'
-const parse = require('read-excel-file');
+//const parse = require('read-excel-file');
 
 
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
 	<html>
-	<script type="text/javascript" src="path-to-javascript-file.js"></script>
+	<script type="text/javascript" src="https://mhpsac.github.io/sac/xlsx.js"></script>
 		<body>
 		<h2>Headline</h2>
 		<input type="file" id="input" />
@@ -73,10 +73,6 @@ const parse = require('read-excel-file');
 
 		uploadProcess() {	
 			console.log('Methode uploadProcess');
-
-
-			// Requiring the module
-			const reader = require('xlsx')
 
 			// Reading our test file
 			const file = reader.readFile('https://mhpsac.github.io/sac/data_file.xlsx')
