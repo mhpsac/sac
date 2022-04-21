@@ -81,10 +81,10 @@
 				  loadthis(that, changedProperties);
 				}
 			  }
-			  LoadLibs();
-}
-			
+			  LoadLibs();			
 		}
+		
+		
 
 		uploadProcess() {	
 			console.log('Methode uploadProcess');
