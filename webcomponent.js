@@ -1,4 +1,5 @@
 // MessageToast
+import readXlsxFile from 'read-excel-file'
 
 (function()  {
     let tmpl = document.createElement('template');
@@ -6,6 +7,7 @@
 	<html>
 		<body>
 		<h2>Headline</h2>
+		<input type="file" id="input" />
 		</body>
 	</html>
     `;
@@ -14,6 +16,7 @@
 
 
 		constructor() {
+
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
@@ -61,14 +64,21 @@
 		loadUploadLibs() {	
 			console.log('Methode loadUploadLibs');
 
-			const XLSX = require('xlsx') ;
 
 			
 		}
 
 		uploadProcess() {	
 			console.log('Methode uploadProcess');
-		
+
+			const input = document.getElementById('input')
+
+			input.addEventListener('change', () => {
+			  readXlsxFile(input.files[0]).then((data) => {
+				// `data` is an array of rows
+				// each row being an array of cells.
+			  })
+			})		
 			
 		}
 	
