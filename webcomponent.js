@@ -7,6 +7,7 @@ const parse = require('read-excel-file');
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
 	<html>
+	<script type="text/javascript" src="path-to-javascript-file.js"></script>
 		<body>
 		<h2>Headline</h2>
 		<input type="file" id="input" />
@@ -73,14 +74,28 @@ const parse = require('read-excel-file');
 		uploadProcess() {	
 			console.log('Methode uploadProcess');
 
-			const input = document.getElementById('input')
 
-			input.addEventListener('change', () => {
-			  readXlsxFile(input.files[0]).then((data) => {
-				// `data` is an array of rows
-				// each row being an array of cells.
-			  })
-			})		
+			// Requiring the module
+			const reader = require('xlsx')
+
+			// Reading our test file
+			const file = reader.readFile('https://mhpsac.github.io/sac/data_file.xlsx')
+
+			let data = []
+
+			const sheets = file.SheetNames
+
+			for(let i = 0; i < sheets.length; i++)
+			{
+			const temp = reader.utils.sheet_to_json(
+					file.Sheets[file.SheetNames[i]])
+			temp.forEach((res) => {
+				data.push(res)
+			})
+			}
+
+			// Printing data
+			console.log(data)
 			
 		}
 	
