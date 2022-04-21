@@ -75,7 +75,7 @@
 			console.log('Methode uploadProcess');
 
 			// Reading our test file
-			const file = reader.readFile('https://mhpsac.github.io/sac/data_file.xlsx')
+			const file = xlsx.readFile('https://mhpsac.github.io/sac/data_file.xlsx')
 
 			let data = []
 
