@@ -1,5 +1,7 @@
 // MessageToast
-import readXlsxFile from 'read-excel-file'
+//import readXlsxFile from 'read-excel-file'
+const parse = require('read-excel-file');
+
 
 (function()  {
     let tmpl = document.createElement('template');
