@@ -1,13 +1,13 @@
 // MessageToast
 //import readXlsxFile from 'read-excel-file'
 //const parse = require('read-excel-file');
-
+//<script type="text/javascript" src="https://mhpsac.github.io/sac/xlsx.js"></script>
 
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
 	<html>
-	<script type="text/javascript" src="https://mhpsac.github.io/sac/xlsx.js"></script>
+	
 		<body>
 		<h2>Headline</h2>
 		<input type="file" id="input" />
