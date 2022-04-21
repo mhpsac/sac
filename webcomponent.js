@@ -41,6 +41,8 @@
 		    console.log('Methode onCustomWidgetAfterUpdate');
             if (this._firstConnection){
 
+				this.loadUploadLibs();
+
 				this.uploadProcess();
 				
 				
@@ -55,6 +57,14 @@
         onCustomWidgetDestroy(){
         }
 
+
+		loadUploadLibs() {	
+			console.log('Methode loadUploadLibs');
+
+			const XLSX = require('xlsx') ;
+
+			
+		}
 
 		uploadProcess() {	
 			console.log('Methode uploadProcess');
