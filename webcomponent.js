@@ -11,7 +11,7 @@
 	<html>
 	
 		<body>
-		<h2>Headline</h2>
+		<h2>kPE Rechnung hochladen</h2>
 		<input type="file" id="input" />
 		</body>
 	</html>
